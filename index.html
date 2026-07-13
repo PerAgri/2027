@@ -17,12 +17,27 @@
 		body {
 			color: #334155;
 		}
-        .hero-block {
-            background-image: url('assets/images/bg-2.jpg');
+		.hero-block {
+			background-image: url('assets/images/bg-2.jpg');
 			background-size: cover;
-			/* background-position: right center;
-			background-repeat: no-repeat; */ 
-        }
+			background-position: right center; 
+			background-repeat: no-repeat;
+			min-height: 80vh; 
+			display: flex;
+			align-items: center;
+			/* This pushes the "center" upwards, moving your text higher */
+			padding-bottom: 30vh; 
+		}
+
+		/* Media query for smaller screens/mobile */
+		@media (max-width: 991px) {
+			.hero-block {
+				background-position: 85% 60%; 
+				min-height: 60vh; 
+				/* Slightly less padding on mobile to keep it balanced */
+				padding-bottom: 5vh; 
+			}
+		}
 		.section-heading {
 			font-family: 'Montserrat', sans-serif;
 			color: #0f172a;
